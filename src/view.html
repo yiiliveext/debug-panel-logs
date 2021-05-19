@@ -25,9 +25,10 @@
                     collectors[currentDebugSession] = xhr.response.data;
                     render();
                 } else {
-
+                    document.querySelector(".router-view").innerHTML = 'An error occurred during loading panel "Logs"';
                 }
             };
+            xhr.onerror = () => document.querySelector(".router-view").innerHTML = 'An error occurred during loading panel "Logs"';
         }
 
         function render() {

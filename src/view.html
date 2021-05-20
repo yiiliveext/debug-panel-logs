@@ -34,7 +34,6 @@
         function render() {
             let logs = collectors[currentDebugSession]["Yiisoft\\Yii\\Debug\\Collector\\LogCollector"]
             logs.forEach((log) => {
-                console.log(log.time);
                 document.querySelector('.panel-info-table tbody').insertAdjacentHTML('beforeend',
                     '<tr><td>' + log.time + '</td><td>' + log.level + '</td><td>' + log.message + '</td></tr>');
             });
